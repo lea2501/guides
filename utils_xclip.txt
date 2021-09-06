@@ -1,0 +1,9 @@
+# to copy the content of a file to the X11 CLIPBOARD selection without displaying it
+```
+$ xclip -sel c < file
+```
+
+or:
+```
+$ xsel -b < file
+```
