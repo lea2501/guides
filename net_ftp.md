@@ -14,5 +14,7 @@ sftp> mkdir [DIR]
 ```
 sftp> get remoteFile
 sftp> get remoteFile localFile
+sftp> get -r someDirectory
 sftp> put localFile
+sftp> put -r localDirectory
 ```

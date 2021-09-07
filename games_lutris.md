@@ -17,7 +17,7 @@ $ makepkg -sic
 
 # To add dxvk support for wine prefix
 ```
-$ export WINEPREFIX=/home/lea/Games/gog/amid-evil
+$ export WINEPREFIX=/path/to/game/dir
 $ setup_dxvk install
 ```
 
