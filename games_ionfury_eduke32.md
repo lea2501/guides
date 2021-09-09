@@ -1,4 +1,4 @@
-# compile eduke32 with fury support:
+# compile eduke32 with fury support
 https://dukeworld.com/eduke32/synthesis/latest/
 ```
 $ cd src/

@@ -1,4 +1,4 @@
-# Console Commands:
+# Console Commands
 The console is enabled by adding "+seta com_allowconsole 1" (without quotes) to the game's launch options in Steam. The ~ key opens and closes the console ingame.
 
 ```
@@ -7,7 +7,7 @@ map game/<map filename>
 map game/alpha1
 ```
 
-# Base levels:
+# Base levels
 ```
 01. Mars City - mars_city1
 02. Mars City Underground - mc_underground
@@ -38,7 +38,7 @@ map game/alpha1
 27. Primary Excavation Site - hellhole
 ```
 
-# RoE levels:
+# RoE levels
 ```
 01. Erebus Level 1: Main Excavation - erebus1
 02. Erebus Level 2: Erebus Dig Site - erebus2
