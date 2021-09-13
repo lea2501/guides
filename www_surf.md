@@ -62,3 +62,8 @@ Ctrl-Shift-o - Open the Web Inspector (Developer Tools) window for the current p
 Ctrl-Shift-v - Toggle the enabling of plugins on that surf instance. This will reload the page.
 F11 - Toggle fullscreen mode.
 ```
+
+# Using ad blocking
+```
+$ firejail --noprofile --hosts-file="~/etc/hosts" surf -bdfgIS "https://searx.tiekoetter.com/"
+```
