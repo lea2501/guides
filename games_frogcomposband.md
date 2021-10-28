@@ -2,6 +2,7 @@
 ```
 $ mkdir -p ~/src
 $ cd ~/src
+# apt-get install autoconf gcc libc6-dev libncursesw5-dev libx11-dev #(debian/devuan)
 $ git clone https://github.com/sulkasormi/frogcomposband.git
 $ cd frogcomposband
 $ sh autogen.sh
