@@ -64,6 +64,17 @@ F11 - Toggle fullscreen mode.
 ```
 
 # Using ad blocking
+## zerohosts
+```
+$ mkdir ~/src
+$ cd ~/src
+$ curl -OL "https://si3t.ch/code/OpenBSD-stuff/zerohosts"
+(edit the script file to specify download tool)
+$ chmod +x zerohosts
+$ doas cp /etc/hosts /etc/hosts.bak
+$ ./zerohosts /etc/hosts
+```
+## Firejail
 ```
 $ firejail --noprofile --hosts-file="~/etc/hosts" surf -bdfgIS "https://searx.tiekoetter.com/"
 ```
