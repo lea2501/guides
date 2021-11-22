@@ -78,3 +78,32 @@ $ ./zerohosts /etc/hosts
 ```
 $ firejail --noprofile --hosts-file="~/etc/hosts" surf -bdfgIS "https://searx.tiekoetter.com/"
 ```
+
+# Dark CSS theme
+Put the file in ~/.surf/styles/default.css to get a dark themed surf. It uses the same CSS as vimb's dark mode.
+It makes everything dark gray and makes images opacity lower unless you hover over them.
+```
+*,div,pre,textarea,body,input,td,tr,p {
+    background-color: #202020 !important;
+    background-image: none !important;
+    color: #bbbbbb !important;
+}
+h1,h2,h3,h4 {
+    background-color: #202020 !important;
+    color: #b8ddea !important;
+}
+img {
+    opacity: .5;
+}
+img:hover {
+    opacity: 1;
+}
+```
+
+# No ads css
+Add this lines to ~/.surf/styles/default.css file to remove ads in startpage.com search engine.
+```
+#bottom-result-container #spon_links { display: none !important; }
+#bottom-result-container #sponsored_csa1 { display: none !important; }
+#bottom-result-container #sponsored_csa2 { display: none !important; }
+```

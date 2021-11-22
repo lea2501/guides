@@ -56,3 +56,9 @@ The following deletes any leading whitespace at the beginning of each line.
 ```
 :%le
 ```
+
+# turning off auto indent when pasting text into vim:
+Add this to ~/.vimrc to enable and disable ':set paste' or ':set nopaste' modes easily:
+```
+set pastetoggle=<F3>
+```
