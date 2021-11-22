@@ -107,3 +107,8 @@ Add this lines to ~/.surf/styles/default.css file to remove ads in startpage.com
 #bottom-result-container #sponsored_csa1 { display: none !important; }
 #bottom-result-container #sponsored_csa2 { display: none !important; }
 ```
+
+# Install needed dependencies
+```
+# pacman -S aspell hunspell hspell nuspell libvoikko
+```
