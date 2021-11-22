@@ -112,3 +112,22 @@ Add this lines to ~/.surf/styles/default.css file to remove ads in startpage.com
 ```
 # pacman -S aspell hunspell hspell nuspell libvoikko
 ```
+
+# tabbed windows
+## Installation
+```
+$ mkdir -p ~/src
+$ cd ~/src
+$ git clone https://git.suckless.org/tabbed
+$ cd tabbed
+# make clean install
+```
+
+## Usage
+```
+$ tabbed surf -e
+```
+Exit browser if last tab is closed
+```
+$ tabbed -c surf -e
+```
