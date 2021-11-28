@@ -137,3 +137,16 @@ Or:
 ```
 $ gpg filename.tar.gz.gpg
 ```
+
+# Backup and transfer private keys to another computer
+## Export keys:
+```
+$ gpg --export-secret-keys > private_keys.pgp
+$ gpg --export > public_keys.pgp
+```
+
+## Import keys:
+```
+$ gpg --import < private_keys.pgp
+$ gpg --import < public_keys.pgp
+```
