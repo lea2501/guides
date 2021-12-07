@@ -110,3 +110,9 @@ $ cd ~/src/Oblige/ && ./Oblige --addon ~/games/doom/tools/oblige/obaddon/obaddon
 $ gzdoom -width 1920 -height 1080 -fullscreen -iwad ~/games/doom/wads/iwads/doom2.wad -file ~/games/doom/wads/oblige/oblige_doom2_gzdoom_$(date +'%y%m%d').wad ~/games/doom/mods/vanilla/pk_doom_sfx/pk_doom_sfx_20120224.wad ~/games/doom/mods/vanilla/jovian_palette/JoyPal.wad ~/games/doom/mods/vanilla/smoothed/smoothed.wad ~/games/doom/mods/zdoom/vanilla_essence/vanilla_essence_4_3.pk3 -savedir ~/games/doom/savegames/doom2/ -skill 3 -warp 01
 > D:\Games\gzdoom\gzdoom.exe -width 1920 -height 1080 -fullscreen -iwad D:\Games\doom\wads\original\doom2.wad -file "D:\Games\doom\wads\oblige\oblige_gzdoom_doom2_$(Get-Date -Format 'yyMMdd').wad" D:\Games\doom\mods\vanilla\pk_doom_sfx\pk_doom_sfx_20120224.wad D:\Games\doom\mods\vanilla\jovian_palette\JoyPal.wad D:\Games\doom\mods\zdoom\vanilla_essence\vanilla_essence_4_3.pk3 -savedir D:\Games\doom\savegames\doom2\ -skill 3 -warp 01
 ```
+
+# Download daily map from dailydoommap
+```
+$ cd ~/games/doom/wads/oblige/ && curl -OL $(lynx -dump http://dailydoommap.org/ | grep "http://dailydoommap.org/maps/" | grep -Eo 'http://[^ >]+') && cd -
+$ gzdoom -width 1920 -height 1080 -fullscreen -iwad ~/games/doom/wads/iwads/doom2.wad -file ~/games/doom/wads/oblige/$(date +'%Y-%m-%d').7z ~/games/doom/mods/vanilla/pk_doom_sfx/pk_doom_sfx_20120224.wad ~/games/doom/mods/vanilla/jovian_palette/JoyPal.wad ~/games/doom/mods/vanilla/smoothed/smoothed.wad ~/games/doom/mods/zdoom/vanilla_essence/vanilla_essence_4_3.pk3 -savedir ~/games/doom/savegames/doom2/ -skill 3 -warp 01
+```
