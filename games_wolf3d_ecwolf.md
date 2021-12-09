@@ -32,5 +32,5 @@ $ sudo rm -fv /usr/bin/ecwolf-alpha
 
 # Usage
 ```
-$ ~/src/ecwolf/build/ecwolf --fullscreen --res 1920 1080 --nowait
+$ ~/src/ecwolf/build/ecwolf --fullscreen --res 1920 1080 --nowait --file ~/games/wolf3d/mods/ecwolf/astrostein_spifferaneous_edition/astrostein_spiff_hd.pk3
 ```

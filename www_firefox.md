@@ -46,3 +46,13 @@ keyword.enabled false
 browser.fixup.alternate.enabled false
 browser.urlbar.oneOffSearches false
 ```
+
+## Disable new tab style
+```
+browser.urlbar.update1 false
+```
+
+## Disable webRTC leaks
+```
+Type "about:config” in the address bar. Scroll down to “media.peerconnection.enabled”, double click to set it to false.
+```

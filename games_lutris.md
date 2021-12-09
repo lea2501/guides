@@ -1,3 +1,11 @@
+# Install (sources)
+```
+$ mkdir -p ~/src
+$ cd ~/src
+$ git clone https://github.com/lutris/lutris.git
+$ ~/src/lutris/bin/lutris
+```
+
 # Install
 ```
 $ sudo pacman -S lutris
