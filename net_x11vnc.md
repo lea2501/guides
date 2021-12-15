@@ -1,4 +1,4 @@
-# Sserver
+# Server
 ```
 $ x11vnc -wait 20 -display :0 -passwd [PASSWORD] -forever -noxdamage -o ~/x11vnc.log
 ```
@@ -11,4 +11,9 @@ $ x11vnc -wait 20 -display :0 -passwd x1103424528 -forever -noxdamage -o ~/x11vn
 # Client (tigervnc)
 ```
 $ vncviewer [server_ip]:[port]
+```
+
+# Show cursor on macos
+```
+$ vncviewer -DotWhenNoCursor [server_ip]
 ```
