@@ -1,4 +1,4 @@
-# Usage:
+# Usage
 ```
 $ supermodel /PATH/TO/GAME_FILE -res=1280x1024
 $ supermodel /PATH/TO/GAME_FILE -res=1024x768

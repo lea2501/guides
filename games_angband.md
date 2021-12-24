@@ -1,4 +1,4 @@
-# Documentation
+# Resources
 ```
 https://angband.readthedocs.io/en/latest/hacking/compiling.html
 ```

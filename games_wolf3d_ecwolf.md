@@ -1,4 +1,4 @@
-# Documentation
+# Resources
 ```
 https://maniacsvault.net/ecwolf/wiki/Compile_ECWolf_on_Linux
 ```

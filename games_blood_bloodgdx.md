@@ -1,4 +1,4 @@
-# Usage:
+# Usage
 ```
 $ java -jar ~/games/buildGDX/BuildGDX.jar
 ```

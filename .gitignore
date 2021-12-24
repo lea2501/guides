@@ -1,0 +1,16 @@
+.git/
+.idea/
+*.iml
+target/
+out/
+*.log
+artifacts.zip
+artifacts/
+
+#VSCODE
+.vscode/
+.classpath
+.factorypath
+.project
+.settings/
+

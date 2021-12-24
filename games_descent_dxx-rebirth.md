@@ -31,7 +31,7 @@ $ scons sdl2=1 d2x=1 builddir_prefix=build/
 $ scons sdl2=1 builddir_prefix=build/
 ```
 
-# Usage:
+# Usage
 ```
 $ d1x-rebirth -hogdir ~/PATH/TO/GAME_DIR -window -notitles -nomovies
 $ d2x-rebirth -hogdir ~/PATH/TO/GAME_DIR -window -notitles -nomovies

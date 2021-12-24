@@ -1,8 +1,3 @@
-# Resources
-```
-https://dukeworld.com/eduke32/synthesis/latest/
-```
-
 # Compilation
 ## Prerequisites:
 ### Debian
@@ -14,24 +9,24 @@ https://dukeworld.com/eduke32/synthesis/latest/
 # pacman -S sdl2_mixer libvpx gtk2 gendesk glu
 ```
 
-## Compilation eduke32 with fury support (snapshots)
+## Compilation eduke32 with shadow warrior support (snapshots):
 ```
 $ cd ~/src/
 $ curl -OL "https://dukeworld.com/eduke32/synthesis/latest/eduke32_src_20210824-9582-072bd40eb.tar.xz"
 $ tar -xxvf eduke32_src_20210824-9582-072bd40eb.tar.xz
 $ cd eduke32_20210824-9582-072bd40eb/
-$ make SDL_TARGET=2 FURY=1
+$ make voidsw
 ```
 
-## Compilation eduke32 with fury support (git)
+## Compilation eduke32 with shadow warrior support (git)
 ```
 $ cd ~/src/
 $ git clone https://voidpoint.io/terminx/eduke32.git
 $ cd eduke32
-$ make SDL_TARGET=2 FURY=1
+$ make voidsw
 ```
 
 # Usage
 ```
-$ ~/src/eduke32/fury -grp fury.grp -game_dir ~/games/ionfury/
+$ ~/src/eduke32/voidsw -grp sw.grp -game_dir ~/games/shadow_warrior/
 ```

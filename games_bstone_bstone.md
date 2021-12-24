@@ -1,4 +1,4 @@
-# Compilation:
+# Compilation
 ```
 $ mkdir -p ~/src
 $ git clone https://github.com/bibendovsky/bstone.git
@@ -8,7 +8,7 @@ $ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=~/src/bstone/build/
 $ cmake --build . --target install
 ```
 
-# Usage:
+# Usage
 ## Blake Stone: Aliens Of Gold
 ```
 $ ~/src/bstone/build/install/bstone --no_screens --vid_width 1920 --vid_height 1080 --vid_renderer software --vid_texture_upscale_filter xbrz --data_dir ~/PATH/TO/GAME_DIR --aog 

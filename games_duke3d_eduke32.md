@@ -1,3 +1,21 @@
+# Compilation
+## Compilation eduke32 without fury support (git)
+```
+$ cd ~/src/
+$ git clone https://voidpoint.io/terminx/eduke32.git
+$ cd eduke32
+$ make SDL_TARGET=2
+```
+
+## Compilation eduke32 without fury support (snapshots)
+```
+$ cd ~/src/
+$ curl -OL "https://dukeworld.com/eduke32/synthesis/latest/eduke32_src_20210824-9582-072bd40eb.tar.xz"
+$ tar -xxvf eduke32_src_20210824-9582-072bd40eb.tar.xz
+$ cd eduke32_20210824-9582-072bd40eb/
+$ make PACKAGE_REPOSITORY=1
+```
+
 # Usage
 ```
 $ eduke32 -grp duke3d.grp -game_dir ~/games/duke3d/

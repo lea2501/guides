@@ -26,11 +26,11 @@ $ make (-j# optional, with # being the number of cores you'd like to use)
 $ cd ..
 $ cp build/obsidian .
 ```
-### Then, obsidian can be launched with:
+### Then, obsidian can be launched with
 ```
 $ ./obsidian --install .
 ```
-### Install obaddon (No longer developed):
+### Install obaddon (No longer developed)
 ```
 $ cd ~/src
 $ git clone https://github.com/caligari87/ObAddon ObAddon
@@ -40,26 +40,26 @@ $ make
 $ cp ~/src/ObAddon/scripts/build/obaddon.pk3 ~/games/doom/tools/oblige/obaddon/
 ```
 
-# Usage:
+# Usage
 ```
 $ oblige --addon /usr/share/oblige/addons/obaddon.pk3
 $ oblige --addon ~/games/doom/tools/oblige/obaddon/obaddon.pk3
 $ ~/src/Obsidian/obsidian --install ~/src/Obsidian/
 ```
 
-## Batch mode allows running OBLIGE non-interactively (without any GUI):
+## Batch mode allows running OBLIGE non-interactively (without any GUI)
 ```
 $ oblige --addon ~/games/doom/tools/oblige/obaddon/obaddon.pk3 --batch ~/games/doom/wads/oblige/oblige-doom.wad game={doom1,ultdoom,doom2,plutonia,tnt} engine={nolimit,boom,gzdoom} length={single,few,episode,game} theme={(doom1)tech,deimos,hell}{(ultdoom)tech,deimos,hell,flesh}{(doom2)tech,urban,hell}{(plutonia)tech,urban,hell}{(tnt)tech,urban,hell,egipt} size={micro,mini,tiny,small,average,large,huge,colossal,gargan,trans}
 ```
 
-## Doom 2:
+## Doom 2
 ```
 $ cd ~/src/Oblige/ && ./Oblige --addon ~/games/doom/tools/oblige/obaddon/obaddon.pk3 --batch ~/games/doom/wads/oblige/oblige_doom2.wad game=doom2 engine=boom length=single theme=hell size=large mons=scarse strenght=medium ramp_up=fast mon_variety=normal health=normal ammo=normal weapons=normal items=normal && cd -
 $ oblige --batch ~/games/doom/wads/oblige/oblige-doom2-gzdoom-single-hell-large-$(date +'%y%m%d').wad game=doom2 engine=gzdoom length=single theme=hell size=large mons=scarse strenght=harder ramp_up=veryfast mon_variety=heaps health=more ammo=heaps weapons=normal items=normal
 $ ~/src/Obsidian/obsidian --install ~/src/Obsidian/ --batch ~/games/doom/wads/oblige/oblige_doom2.wad --load ~/games/doom/tools/obsidian/configs/doom2_vanilla.txt
 ```
 
-## Doom 1:
+## Doom 1
 ```
 $ oblige --batch ~/games/doom/wads/oblige/oblige-doom1-nolimit-single-hell-large-$(date +'%y%m%d').wad game=doom1 engine=nolimit length=single theme=hell size=large mons=scarse strenght=harder ramp_up=veryfast mon_variety=heaps health=more ammo=heaps weapons=normal items=normal
 ```
