@@ -1,5 +1,9 @@
-# JDownloader -guiless
+# Usage
+```
+$ java -jar ~/bin/jdownloader/JDownloader.jar
+```
 
+# JDownloader -guiless
 ## Main controlling
 
 The running instance of JD can be controlled using a second terminal window in which pre-defined commands can be entered using the same executable as used to start the application. Eg:
