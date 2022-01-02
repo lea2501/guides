@@ -56,3 +56,11 @@ browser.urlbar.update1 false
 ```
 Type "about:config” in the address bar. Scroll down to “media.peerconnection.enabled”, double click to set it to false.
 ```
+
+# Apply privacy settings in user.js
+```
+$ mkdir -p ~/src
+$ cd ~/src
+$ git clone https://github.com/arkenfox/user.js.git
+$ cp user.js/user.js ~/.mozilla/firefox/[profile_directory].default/
+```
