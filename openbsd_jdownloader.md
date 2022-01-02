@@ -7,5 +7,5 @@ $ pkg_add jdk
 
 # Usage
 ```
-$ java -jar .jdownloader/JDownloader.jar
+$ java -jar $HOME/bin/jdownloader/JDownloader.jar
 ```

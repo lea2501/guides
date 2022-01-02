@@ -1,6 +1,6 @@
 # Remove asking for doas password for user
 ```
-# echo "permit nopass [USERNAME]" >> /etc/doas.conf
+# echo 'permit nopass keepenv YOUR_USERNAME' > /etc/doas.conf
 ```
 
 # Allow user to run commands as root

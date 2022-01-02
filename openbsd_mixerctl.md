@@ -10,6 +10,6 @@ $ mixerctl outputs.master=200,200
 
 # Set output master to +/- value
 ```
-$ mixerctl outputs.master=+10
-$ mixerctl outputs.master=-10
+# mixerctl outputs.master=+10
+# mixerctl outputs.master=-10
 ```
