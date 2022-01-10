@@ -18,11 +18,17 @@ $ apm -m
 ## Sets hw.setperf to 0, the CPU runs at lower MHz
 ```
 $ apm -L
+$ sysctl hw.setperf
+hw.setperf=0
+$ sysctl hw.cpuspeed
+hw.cpuspeed=800
 ```
 
 ## Sets hw.setperf to 100, the CPU runs at maximum Mhz
 ```
 $ apm -H
+$ sysctl hw.cpuspeed
+hw.cpuspeed=2801
 ```
 
 # Edit settings on boot
