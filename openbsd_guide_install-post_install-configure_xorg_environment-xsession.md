@@ -33,6 +33,6 @@ xset b off
 # use caps lock as ctrl key
 setxkbmap -option ctrl:nocaps
 
-# start cwm!
+# start cwm
 exec cwm
 ```
