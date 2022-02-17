@@ -54,7 +54,9 @@ browser.urlbar.update1 false
 
 ## Disable webRTC leaks
 ```
-Type "about:config” in the address bar. Scroll down to “media.peerconnection.enabled”, double click to set it to false.
+Type "about:config” in the address bar
+To disable RTCPeerConnection and protect IP addresses leakage, go to about:config and toggle media.peerconnection.enabled to false.
+To disable Media Devices, toggle media.navigator.enabled as well as media.peerconnection.enabled both to false.
 ```
 
 # Apply privacy settings in user.js
