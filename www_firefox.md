@@ -59,10 +59,17 @@ To disable RTCPeerConnection and protect IP addresses leakage, go to about:confi
 To disable Media Devices, toggle media.navigator.enabled as well as media.peerconnection.enabled both to false.
 ```
 
+# Enable Encrypted DNS
+```
+In preferences, go to General > 'Network Settings' > Settings
+Check 'Enable DNS over HTTPS'
+Add 'https://dns.quad9.net/dns-query'
+```
+
 # Apply privacy settings in user.js
 ```
 $ mkdir -p ~/src
 $ cd ~/src
 $ git clone https://github.com/arkenfox/user.js.git
-$ cp user.js/user.js ~/.mozilla/firefox/[profile_directory].default/
+$ cp ~/src/user.js/user.js ~/.mozilla/firefox/[profile_directory].default/
 ```
