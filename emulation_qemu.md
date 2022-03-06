@@ -21,7 +21,7 @@ $ qemu-img create -f qcow2 ~/PATH/TO/DISKIMAGE_QCOW2 20G
 -enable-kvm						# enable kvm virtualization
 -cpu host						# forward all CPU features to the guest system
 -m 2G							# set memory amount
--soundhw all						# set audio devices '-soundhw help' to show all available devices
+-soundhw hda						# set audio devices '-soundhw help' to show all available devices
 -device intel-hda -device hda-duplex			# set audio device to intel-hda
 -device intel-hda -device hda-duplex -device AC97 -device sb16 -device adlib    # complete sound settings
 -nic user,model=virtio-net-pci				# enable basic networking (linux)
@@ -40,19 +40,20 @@ $ qemu-img create -f qcow2 ~/PATH/TO/DISKIMAGE_QCOW2 20G
 
 # Webcam passthrough:
 ```
-$ lsusb
-  Bus 003 Device 004: ID 04f2:b336 Chicony Electronics Co., Ltd
+lsusb
+Bus 003 Device 004: ID 0c45:672e Microdia Integrated_Webcam_HD
 ```
 ## Add read/write permissions to /dev/bus/usb/003/004
 ```
 $ sudo chmod 666 /dev/bus/usb/003/004
+-usb -device usb-ehci,id=ehci -device usb-host,hostbus=3,hostaddr=4
+```
+
+or:
+
+```
 -device usb-ehci,id=usb,bus=pci.0,addr=0x4
   Bus 001 Device 007: ID 0c45:6717 Microdia Integrated_Webcam_HD
-```
-## Add read/write permissions to /dev/bus/usb/001/007
-```
-$ sudo chmod 666 /dev/bus/usb/001/007
--device usb-ehci,id=usb,bus=pci.0,addr=0x7
 ```
 
 # Start qemu with OS installation disk:
@@ -86,19 +87,25 @@ $ mkisofs -r -o file.iso ~/PATH/TO/DIR_OR_FILES
 ```
 
 # Examples:
+## Devuan
+```
+$ mkdir -p ~/vms/devuan/
+$ qemu-img create -f qcow2 ~/vms/devuan/devuan_qcow2 25G
+$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -machine q35,accel=kvm -device intel-iommu -cpu host -nic user,model=virtio-net-pci -usb -device usb-ehci,id=ehci -device usb-host,hostbus=3,hostaddr=4 -boot order=d -drive file=~/vms/devuan/devuan_qcow2,format=qcow2 -cdrom ~/isos/devuan_chimaera_4.0.0_amd64_desktop.iso
+```
 ## OpenBSD
 ```
-$ mkdir -p ~/PATH/TO/VM/
-$ qemu-img create -f qcow2 ~/PATH/TO/DISKIMAGE_QCOW2 40G
-$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -cpu host -nic user,model=virtio-net-pci -boot order=d -drive file=~/PATH/TO/DISKIMAGE_QCOW2,format=qcow2 -cdrom ~/PATH/TO/ISO_FILE
-$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -cpu host -nic user,model=virtio-net-pci -boot order=c -drive file=~/PATH/TO/DISKIMAGE_QCOW2,format=qcow2
+$ mkdir -p ~/vms/openbsd
+$ qemu-img create -f qcow2 ~/vms/openbsd/openbsd_qcow2 25G
+$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -cpu host -nic user,model=virtio-net-pci -boot order=d -drive file=~/vms/openbsd/openbsd_qcow2,format=qcow2 -cdrom ~/PATH/TO/ISO_FILE
+$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -cpu host -nic user,model=virtio-net-pci -boot order=c -drive file=~/vms/openbsd/openbsd_qcow2,format=qcow2
 ```
 ## Win9x
 ```
-$ mkdir -p ~/PATH/TO/VM/
-$ qemu-img create -f qcow2 ~/PATH/TO/DISKIMAGE_QCOW2 20G
-$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -cpu host -nic user,model=virtio-net-pci -boot order=a -drive file=~/PATH/TO/DISKIMAGE_QCOW2,format=qcow2 -cdrom ~/PATH/TO/ISO_FILE -fda ~/PATH/TO/FLOPPYIMAGE
-$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -cpu host -nic user,model=virtio-net-pci -boot order=c -drive file=~/PATH/TO/DISKIMAGE_QCOW2,format=qcow2
+$ mkdir -p ~/vms/win/
+$ qemu-img create -f qcow2 ~/vms/win/win98_qcow2 25G
+$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -cpu host -nic user,model=virtio-net-pci -boot order=a -drive file=~/vms/win/win98_qcow2,format=qcow2 -cdrom ~/PATH/TO/ISO_FILE -fda ~/PATH/TO/FLOPPYIMAGE
+$ qemu-system-x86_64 -m 2G -device intel-hda -device hda-duplex -enable-kvm -cpu host -nic user,model=virtio-net-pci -boot order=c -drive file=~/vms/win/win98_qcow2,format=qcow2
 ```
 
 # Get mouse back from qemu/kvm
