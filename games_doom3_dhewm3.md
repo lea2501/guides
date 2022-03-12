@@ -1,12 +1,13 @@
 # Usage
 ```
-$ dhewm3 +set fs_basepath ~/PATH/TO/GAME_DIR/ +set game base +seta com_allowconsole 1
-$ dhewm3 +set fs_basepath ~/PATH/TO/GAME_DIR/ +set game d3xp +seta com_allowconsole 1
+$ dhewm3 +set fs_basepath ~/games/doom3 +set game base +seta com_allowconsole 1
+$ dhewm3 +set fs_basepath ~/games/doom3 +set game d3xp +seta com_allowconsole 1
+$ dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +seta com_allowconsole 1
 ```
 
 # Allow console
 ```
-$ dhewm3 +set r_fullscreen 1 +set r_mode -1 +set r_customWidth 1920 +set r_customHeight 1080 +set fs_basepath ~/PATH/TO/GAME_DIR/ +set game base +seta com_allowconsole 1 +map game/alphalabs1
+$ dhewm3 +set r_fullscreen 1 +set r_mode -1 +set r_customWidth 1920 +set r_customHeight 1080 +set fs_basepath ~/games/doom3 +set game base +seta com_allowconsole 1 +map game/alphalabs1
 ```
 
 # cheats
