@@ -1,13 +1,18 @@
 # Usage
 
+# To show available wifi networks
+```
+$ nmcli device wifi
+```
+
 # To connect to a wifi network
 ```
-$ nmcli dev wifi connect <name> password <password>
+$ nmcli dev wifi connect <BSSID or SSID> password <PASSWORD>
 ```
 
 # To connect to a wifi on the wlan1 wifi interface
 ```
-$ nmcli dev wifi connect <name> password <password> iface wlan1 [profile name]
+$ nmcli dev wifi connect <BSSID or SSID> password <PASSWORD> iface wlan1 [profile name]
 ```
 
 # To disconnect an interface
