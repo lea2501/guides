@@ -11,6 +11,7 @@ $ find ~/games/emu/dos/*/{*.exe,*.bat,*.com} ! -name *setup* ! -name *install* !
 # Run game directly:
 ```
 $ dosbox -conf ~/PATH/TO/CONFIG -c "mount c: ~/PATH/TO/GAMES_DIRECTORY" -c "c:" -c "cd GAME_DIR" -c "GAME_EXECUTABLE"
+$ dosbox -conf ~/.config/dosbox/dosbox-staging.conf -c "mount c: ~/games/emu/dos/" -c "c:" -c "cd nfsse" -c "nfs.exe"
 ```
 
 # Run game with CD:
