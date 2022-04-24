@@ -52,6 +52,11 @@ browser.urlbar.oneOffSearches false
 browser.urlbar.update1 false
 ```
 
+## Disable pocket extention
+```
+extensions.pocket.enabled false
+```
+
 ## Disable webRTC leaks
 ```
 Type "about:config” in the address bar
