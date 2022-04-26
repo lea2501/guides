@@ -8,7 +8,7 @@ https://www.doomworld.com/forum/topic/85548-dos-slige/
 ## Compile slige
 ```
 $ mkdir -p ~/src/xwadtools && cd ~/src/xwadtools/ && curl -O ftp://ftp.fu-berlin.de/pc/games/idgames/source/xwadtools-20010615.tar.gz && tar -xzvf xwadtools-20010615.tar.gz
-$ cp -r ~/src/xwadtools/slige ~/src/ && cd ~/src/slige
+$ cp -r ~/src/xwadtools/xwadtools/slige ~/src/ && cd ~/src/slige
 $ cc -m32 slige.c -o slige
 ```
 
