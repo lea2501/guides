@@ -20,3 +20,13 @@
 ```
 # ntfs-3g /dev/sd2i /mnt/dev0
 ```
+
+# Mounting exfat formatted disk
+```
+# pkg_add exfat-fuse
+# mkdir -p ~/mount
+# dmesg
+# mount.exfat -o uid=1000 /dev/sd2j ~/mount
+...
+# umount /mnt/sd1i
+```
