@@ -3,8 +3,9 @@
 https://github.com/Sude-/lgogdownloader
 ```
 
-# Installation (Source)
+# Installation (Source Debian/Ubuntu)
 ```
+$ sudo apt-get install build-essential libcurl4-openssl-dev libboost-regex-dev libjsoncpp-dev librhash-dev libtinyxml2-dev libhtmlcxx-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-date-time-dev libboost-iostreams-dev help2man cmake pkg-config zlib1g-dev qtwebengine5-dev ninja-build
 $ mkdir ~/src/ && cd ~/src
 $ curl -OL "$(curl -s https://api.github.com/repos/Sude-/lgogdownloader/releases/latest | jq -r ".assets[] | select(.name | test(\"tar.gz\")) | .browser_download_url" | head -n 1)"
 $ tar -xvzf lgogdownloader-*.tar.gz
