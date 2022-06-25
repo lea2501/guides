@@ -34,8 +34,10 @@ $ lgogdownloader --login
 $ lgogdownloader --list
 $ lgogdownloader --list-details --game <title>
 $ lgogdownloader --download
+$ lgogdownloader --updated --download
 (or)
-$ lgogdownloader --download --threads 6 --platform linux --exclude extras  --game <title>
+$ lgogdownloader --download --threads 8 --platform linux --exclude extras  --game <title>
+$ lgogdownloader --download --threads 8 --exclude patches --game <title>
 ```
 
 # Repairing files
