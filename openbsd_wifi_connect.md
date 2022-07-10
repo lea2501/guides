@@ -31,6 +31,7 @@ Welcome to the OpenBSD/amd64 X.X installation program.
 
 ## Step 3: Connect to wifi
 ```
+# ifconfig [INTERFACE] scan
 # ifconfig [INTERFACE] nwid "my.local.access.point" wpakey "mysekritpassphrase"
 # dhclient [INTERFACE] 
 ```
