@@ -1,0 +1,4 @@
+# Usage
+```shell
+$ pcidump -xv
+```

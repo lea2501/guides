@@ -1,4 +1,0 @@
-# Usage
-```
-$ xsetroot -solid <color>
-```
