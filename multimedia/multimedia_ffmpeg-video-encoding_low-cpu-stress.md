@@ -63,6 +63,67 @@ Notas:
 - Archivo resultante ~20-30% más grande que x265 equivalente
 - En Ryzen 7 5700U debería correr a ~1.5-2x realtime
 
+## x264 - Calidad visual máxima (visualmente transparente, CPU liviano)
+
+Para cuando se prioriza calidad de imagen casi lossless, con downscale de 4K a 1080p/720p.
+Archivo más grande pero indistinguible del original a ojo.
+
+```shell
+# 1080p - visualmente transparente (~10-12GB para peli de 3h a 60fps)
+$ ffmpeg -i input.mkv \
+  -map 0:v:0 -map 0:a:2 \
+  -sn \
+  -vf "scale=1920:1080:flags=lanczos,format=yuv420p" \
+  -c:v libx264 \
+  -preset veryfast \
+  -crf 17 \
+  -tune film \
+  -c:a copy \
+  -movflags +faststart \
+  output_hq_1080p.mp4
+
+# 720p - visualmente transparente (~5-7GB para peli de 3h a 60fps)
+$ ffmpeg -i input.mkv \
+  -map 0:v:0 -map 0:a:2 \
+  -sn \
+  -vf "scale=1280:720:flags=lanczos,format=yuv420p" \
+  -c:v libx264 \
+  -preset veryfast \
+  -crf 17 \
+  -tune film \
+  -c:a copy \
+  -movflags +faststart \
+  output_hq_720p.mp4
+```
+
+## Comparación veryfast vs fast en libx264 (fuente 4K60fps → 1080p60)
+
+```text
+                    | veryfast              | fast
+--------------------|-----------------------|------------------------
+Velocidad (1.8GHz) | ~1-1.5x realtime      | ~0.7-1x realtime
+Tiempo peli 3h     | ~2-3h                 | ~3-4.5h
+Tamaño CRF 17      | ~12GB                 | ~10-11GB (mejor compresión)
+Tamaño CRF 22      | ~7.5GB                | ~6.5GB
+Calidad visual      | Excelente             | Excelente (marginal mejor)
+Carga CPU           | ~50-60%               | ~70-80%
+Temperatura aprox   | +10-15°C sobre idle   | +20-25°C sobre idle
+```
+
+Diferencia de calidad entre veryfast y fast: prácticamente imperceptible.
+La ventaja de fast es ~10-15% mejor compresión (archivo más chico) a costa de más tiempo y calor.
+
+## Equivalencia de CRF entre codecs (misma calidad visual)
+
+```text
+Calidad             | libx264 CRF | libx265 CRF | Tamaño relativo
+--------------------|-------------|-------------|----------------
+Casi lossless       | 15-16       | 18-19       | x265 ~30% menor
+Visualmente transp. | 17-18       | 20-21       | x265 ~30% menor
+Excelente           | 19-21       | 22-23       | x265 ~30% menor
+Buena (priorizar GB)| 22-23       | 25-26       | x265 ~30% menor
+```
+
 ## Comparación de presets por carga de CPU
 
 ```text
