@@ -50,6 +50,7 @@ $ ffmpeg -i input.mkv \
   -maxrate 5500k \
   -bufsize 11000k \
   -tune film \
+  -x264opts rc-lookahead=60:aq-strength=1.2:deblock=-1,-1 \
   -c:a copy \
   -movflags +faststart \
   output_1080p60.mp4
@@ -62,6 +63,21 @@ Notas:
 - `-tune film` optimiza para contenido cinematográfico sin costo extra de CPU
 - Archivo resultante ~20-30% más grande que x265 equivalente
 - En Ryzen 7 5700U debería correr a ~1.5-2x realtime
+
+### x264opts - mejoras de calidad sin costo significativo de CPU
+
+```text
+rc-lookahead=60    Más frames de anticipación para decidir bitrate. Reduce artifacts
+                   en escenas de mucho movimiento (especialmente a 60fps). Costo: más
+                   RAM (~200MB extra), CPU casi igual.
+
+aq-strength=1.2    Adaptive Quantization más agresivo. Preserva mejor el detalle en
+                   zonas oscuras y gradientes. Default es 1.0. Costo CPU: nulo.
+
+deblock=-1,-1      Reduce el filtro de deblocking. Mantiene más nitidez/detalle fino
+                   a costa de mostrar levemente más bordes de bloque (imperceptible a
+                   CRF bajo). Costo CPU: nulo.
+```
 
 ## x264 - Calidad visual máxima (visualmente transparente, CPU liviano)
 
@@ -78,6 +94,7 @@ $ ffmpeg -i input.mkv \
   -preset veryfast \
   -crf 17 \
   -tune film \
+  -x264opts rc-lookahead=60:aq-strength=1.2:deblock=-1,-1 \
   -c:a copy \
   -movflags +faststart \
   output_hq_1080p.mp4
@@ -91,6 +108,7 @@ $ ffmpeg -i input.mkv \
   -preset veryfast \
   -crf 17 \
   -tune film \
+  -x264opts rc-lookahead=60:aq-strength=1.2:deblock=-1,-1 \
   -c:a copy \
   -movflags +faststart \
   output_hq_720p.mp4
@@ -143,6 +161,7 @@ $ ffmpeg -i input.mkv \
   -maxrate 6000k \
   -bufsize 8000k \
   -tune film \
+  -x264opts rc-lookahead=60:aq-strength=1.2:deblock=-1,-1 \
   -pass 1 \
   -an -f null /dev/null
 
@@ -157,6 +176,7 @@ $ ffmpeg -i input.mkv \
   -maxrate 6000k \
   -bufsize 8000k \
   -tune film \
+  -x264opts rc-lookahead=60:aq-strength=1.2:deblock=-1,-1 \
   -pass 2 \
   -c:a copy \
   -movflags +faststart \
