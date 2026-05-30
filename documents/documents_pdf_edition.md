@@ -13,3 +13,10 @@ $ qpdf --empty --pages pdf1 pdf2 pdf3 -- pdf-final.pdf
 ```shell
 $ ps2pdf pdf-final.pdf pdf-final_.pdf
 ```
+
+## Reduce pdf file size
+```shell
+$ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dDownsampleColorImages=true -dColorImageResolution=120 -dDownsampleGrayImages=true -dGrayImageResolution=120 -dDownsampleMonoImages=true -dMonoImageResolution=120 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+$ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dDownsampleColorImages=true -dColorImageResolution=120 -dDownsampleGrayImages=true -dGrayImageResolution=120 -dDownsampleMonoImages=true -dMonoImageResolution=120 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+$ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dDownsampleColorImages=true -dColorImageResolution=120 -dDownsampleGrayImages=true -dGrayImageResolution=120 -dDownsampleMonoImages=true -dMonoImageResolution=120 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+```
