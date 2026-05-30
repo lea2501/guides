@@ -37,8 +37,8 @@ $ sensors | grep -i "tctl\|tdie\|tccd"
 # Temperatura CPU + RAM cada 2 segundos:
 $ watch -n 2 'sensors | grep -i "core\|package\|tctl\|tdie" ; echo "---" ; free -h | head -2'
 
-# Temperatura + frecuencia CPU:
-$ watch -n 2 'sensors | grep -i "core\|package\|tctl\|tdie" ; echo "---" ; grep "^cpu MHz" /proc/cpuinfo | head -4'
+# Temperatura + frecuencia CPU + RAM:
+$ watch -n 2 'sensors | grep -i "core\|package\|tctl\|tdie" ; echo "---" ; grep "^cpu MHz" /proc/cpuinfo | head -4 ; echo "---" ; free -h | head -2'
 
 # Logging a archivo (una lectura por segundo):
 $ while true; do echo "$(date +%H:%M:%S) $(sensors | grep 'Package id 0' | grep -oP '\+\S+')"; sleep 1; done | tee /tmp/temp_log.txt
