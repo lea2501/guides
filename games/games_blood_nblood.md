@@ -1,14 +1,13 @@
 # Find games:
 ```shell
 $ find ~/PATH/TO/BLOOD_DIR/*.ini ! -name *mapedit* -type f | sort
-$ find ~/games/nblood/*/*.ini ! -name *mapedit* -type f | sort
+$ find ~/games/blood/*/*.ini ! -name *mapedit* -type f | sort
 ```
 
 # Usage
 ```shell
-$ nblood -game_dir ~/PATH/TO/BLOOD_DIR -ini FILE.ini
-$ nblood -game_dir ~/games/nblood/ -ini fo.ini
-$ nblood -game_dir /usr/share/games/nblood/ -ini fo.ini
+$ cd ~/games/blood/base/ && ~/src/NBlood/nblood -ini FRENCHM/frmeat.ini -game_dir FRENCHM
+$ cd ~/games/blood/base && ~/src/NBlood/nblood -usecwd -g BLOOD.RFF -j mods/eviction -ini mods/eviction/eviction.ini
 ```
 
 # Random map pack:
