@@ -17,8 +17,6 @@ $ ffmpeg -i input.mkv \
   -c:v libx265 \
   -preset fast \
   -crf 23 \
-  -maxrate 5000k \
-  -bufsize 10000k \
   -x265-params "pools=16:frame-threads=4:rc-lookahead=20:bframes=4:ref=3:aq-mode=3:psy-rd=1.5" \
   -c:a copy \
   -movflags +faststart \
@@ -47,8 +45,6 @@ $ ffmpeg -i input.mkv \
   -c:v libx264 \
   -preset veryfast \
   -crf 22 \
-  -maxrate 5500k \
-  -bufsize 11000k \
   -tune film \
   -x264opts rc-lookahead=60:aq-strength=1.2:deblock=-1,-1 \
   -c:a copy \
@@ -222,6 +218,56 @@ Notas 2-pass:
 - El pass 1 es más rápido porque no escribe video real
 - Tiempo total ≈ 1.5x el tiempo de un encode CRF (pass 1 es ~50% más rápido que pass 2)
 - Borrar archivos de log después: `rm ffmpeg2pass-0.log* x265_2pass.log*`
+
+## Limitar bitrate máximo (opcional, para streaming o dispositivos limitados)
+
+Por defecto con CRF, el encoder usa los bits que necesite para mantener la calidad.
+Si necesitás capar el bitrate (ej: streaming, dispositivo con decoder limitado), agregá:
+
+```shell
+# Agregar estas líneas al comando CRF para limitar picos de bitrate:
+  -maxrate 8000k \
+  -bufsize 16000k \
+```
+
+IMPORTANTE: maxrate bajo + CRF = artifacts en escenas de acción. El encoder necesita
+picos de bitrate para mantener calidad en movimiento rápido. Si capás muy bajo, el
+CRF no puede cumplir su objetivo de calidad.
+
+Regla: maxrate debería ser al menos 2x el bitrate promedio esperado.
+
+```text
+Resolución/FPS      | Bitrate promedio CRF17 | maxrate mínimo sugerido
+--------------------|------------------------|------------------------
+720p 24fps          | ~3000-4000k            | 8000k
+720p 60fps          | ~5000-7000k            | 14000k
+1080p 24fps         | ~5000-7000k            | 14000k
+1080p 60fps         | ~8000-14000k           | 20000k+
+```
+
+Si no necesitás limitar para streaming, no uses maxrate/bufsize con CRF.
+
+## Encoding sin CRF - bitrate fijo con maxrate (para tamaño predecible)
+
+Cuando importa el tamaño final exacto y no usás CRF:
+
+```shell
+# x264 - bitrate fijo ~6GB para peli de 3h:
+$ ffmpeg -i input.mkv \
+  -map 0:v:0 -map 0:a:2 \
+  -sn \
+  -vf "scale=1920:1080:flags=lanczos,format=yuv420p" \
+  -c:v libx264 \
+  -preset medium \
+  -b:v 4000k \
+  -maxrate 6000k \
+  -bufsize 8000k \
+  -tune film \
+  -x264opts rc-lookahead=60:aq-strength=1.2:deblock=-1,-1 \
+  -c:a copy \
+  -movflags +faststart \
+  output.mp4
+```
 
 ## Comparación de presets por carga de CPU
 
