@@ -124,6 +124,85 @@ Excelente           | 19-21       | 22-23       | x265 ~30% menor
 Buena (priorizar GB)| 22-23       | 25-26       | x265 ~30% menor
 ```
 
+## Encoding en 2 pasadas (2-pass)
+
+2-pass distribuye mejor el bitrate: usa más bits en escenas complejas y menos en las simples.
+Resultado: tamaño más predecible y calidad más uniforme que CRF, a costa de 2x el tiempo.
+
+### x264 - 2 pasadas
+
+```shell
+# Pass 1 (análisis, no genera video final):
+$ ffmpeg -i input.mkv \
+  -map 0:v:0 -map 0:a:2 \
+  -sn \
+  -vf "scale=1920:1080:flags=lanczos,format=yuv420p" \
+  -c:v libx264 \
+  -preset medium \
+  -b:v 4000k \
+  -maxrate 6000k \
+  -bufsize 8000k \
+  -tune film \
+  -pass 1 \
+  -an -f null /dev/null
+
+# Pass 2 (encoding final):
+$ ffmpeg -i input.mkv \
+  -map 0:v:0 -map 0:a:2 \
+  -sn \
+  -vf "scale=1920:1080:flags=lanczos,format=yuv420p" \
+  -c:v libx264 \
+  -preset medium \
+  -b:v 4000k \
+  -maxrate 6000k \
+  -bufsize 8000k \
+  -tune film \
+  -pass 2 \
+  -c:a copy \
+  -movflags +faststart \
+  output_1080p_2pass.mp4
+```
+
+### x265 - 2 pasadas
+
+```shell
+# Pass 1:
+$ ffmpeg -i input.mkv \
+  -map 0:v:0 -map 0:a:2 \
+  -sn \
+  -vf "scale=1920:1080:flags=lanczos,format=yuv420p" \
+  -c:v libx265 \
+  -preset fast \
+  -b:v 3300k \
+  -maxrate 6000k \
+  -bufsize 6600k \
+  -x265-params "pools=16:frame-threads=4:rc-lookahead=20:bframes=4:ref=3:aq-mode=3:psy-rd=1.5:pass=1:stats=x265_2pass.log" \
+  -an -f null /dev/null
+
+# Pass 2:
+$ ffmpeg -i input.mkv \
+  -map 0:v:0 -map 0:a:2 \
+  -sn \
+  -vf "scale=1920:1080:flags=lanczos,format=yuv420p" \
+  -c:v libx265 \
+  -preset fast \
+  -b:v 3300k \
+  -maxrate 6000k \
+  -bufsize 6600k \
+  -x265-params "pools=16:frame-threads=4:rc-lookahead=20:bframes=4:ref=3:aq-mode=3:psy-rd=1.5:pass=2:stats=x265_2pass.log" \
+  -c:a copy \
+  -movflags +faststart \
+  output_1080p_2pass.mp4
+```
+
+Notas 2-pass:
+- `-b:v` es el bitrate promedio objetivo (determina el tamaño final)
+- Para ~6GB en peli de 3h: `-b:v 3300k` (x265) o `-b:v 4000k` (x264)
+- Para ~8GB en peli de 3h: `-b:v 4500k` (x265) o `-b:v 5500k` (x264)
+- El pass 1 es más rápido porque no escribe video real
+- Tiempo total ≈ 1.5x el tiempo de un encode CRF (pass 1 es ~50% más rápido que pass 2)
+- Borrar archivos de log después: `rm ffmpeg2pass-0.log* x265_2pass.log*`
+
 ## Comparación de presets por carga de CPU
 
 ```text
