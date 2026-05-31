@@ -47,6 +47,8 @@ OLLAMA_MODELS=~/ia/models ollama pull qwen3:8b
 If you already exported `OLLAMA_MODELS` in your shell config, you can simply run:
 
 ```bash
+ollama pull qwen3:1.7b
+ollama pull qwen3:4b
 ollama pull qwen3:8b
 ollama pull qwen3:14b
 ```

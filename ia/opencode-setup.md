@@ -19,7 +19,9 @@ Create or edit `~/.config/opencode/config.json`:
   },
   "model": {
     "qwen3:14b": "ollama/qwen3:14b",
-    "qwen3:8b": "ollama/qwen3:8b"
+    "qwen3:8b": "ollama/qwen3:8b",
+    "qwen3:4b": "ollama/qwen3:4b",
+    "qwen3:1.7b": "ollama/qwen3:1.7b"
   }
 }
 ```
