@@ -17,7 +17,7 @@ Stack 100% offline: micrófono → whisper.cpp (STT) → ollama (LLM) → piper 
 Instala en `~/ia/voice-assistant/`:
 - whisper.cpp compilado desde source (STT)
 - piper binario pre-compilado (TTS)
-- Voz `es_MX-claude-high` (español mexicano, calidad alta)
+- Voz `es_AR-daniela-high` (español argentino, femenina, calidad alta)
 - Modelo whisper `base` (buena relación velocidad/calidad)
 
 Crea symlinks en `~/bin/`:
@@ -68,9 +68,10 @@ Cambiar modelo: editar `WHISPER_MODEL` en el script de uso.
 
 Voces en español disponibles:
 
-- `es_MX-claude-high` — mexicano, masculina, alta calidad (default)
-- `es_ES-davefx-medium` — español ibérico, masculina
+- `es_AR-daniela-high` — argentino, femenina, alta calidad (default)
+- `es_MX-claude-high` — mexicano, masculina, alta calidad
 - `es_ES-sharvard-medium` — español ibérico, femenina
+- `es_ES-davefx-medium` — español ibérico, masculina
 
 Más voces: https://huggingface.co/rhasspy/piper-voices/tree/main/es
 
