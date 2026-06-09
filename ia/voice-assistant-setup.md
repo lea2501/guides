@@ -82,6 +82,16 @@ Más voces: https://huggingface.co/rhasspy/piper-voices/tree/main/es
 
 ## Troubleshooting
 
+### El asistente lee texto en inglés (thinking)
+
+Los modelos qwen3 generan un bloque `<think>...</think>` en inglés antes de responder.
+Los scripts ya filtran esto automáticamente. Si usás otro modelo que haga algo similar,
+la respuesta se limpia con:
+
+```bash
+sed ':a;N;$!ba;s/<think>.*<\/think>//g'
+```
+
 ### No se escucha audio
 
 ```bash
