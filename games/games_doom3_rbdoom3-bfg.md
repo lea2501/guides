@@ -1,21 +1,19 @@
-# Usage
+# Doom 3 BFG / RBDOOM3-BFG
+
+Estado local: no encontré una instalación de RBDOOM3-BFG ni datos de Doom 3 BFG en `~/src` o `~/games`. Esta guía queda sólo como nota para no confundirla con dhewm3.
+
+## Diferencia importante
+
+- `dhewm3` usa los datos clásicos de Doom 3: `base/pak000.pk4` a `base/pak008.pk4` y `d3xp/pak000.pk4`.
+- RBDOOM3-BFG usa Doom 3: BFG Edition, que tiene otra estructura de datos.
+- Doom 3 BFG Edition no es soportado por dhewm3.
+
+## Pendiente si se instala RBDOOM3-BFG
+
 ```shell
-$ dhewm3 +set fs_basepath ~/PATH/TO/GAME_DIR/ +set game base +seta com_allowconsole 1
-$ dhewm3 +set fs_basepath ~/PATH/TO/GAME_DIR/ +set game d3xp +seta com_allowconsole 1
+~/src/rbdoom3-bfg/build/RBDoom3BFG +set fs_basepath ~/games/doom3-bfg
 ```
 
-# Allow console
 ```shell
-$ dhewm3 +set r_fullscreen 1 +set r_mode -1 +set r_customWidth 1920 +set r_customHeight 1080 +set fs_basepath ~/PATH/TO/GAME_DIR/ +set game base +seta com_allowconsole 1 +map game/alphalabs1
-```
-
-# cheats
-```text
-give weapon_<weapon name> - bfg, chaingun, chainsaw, flashlight, machinegun, pistol, plasmagun, rocketlauncher and shotgun.
-```
-
-# Play random map
-```shell
-$ export GAME_DIR=~/games/doom3 && export basegame=base && mapfile=$(unzip -l $GAME_DIR/${basegame}/pak000.pk4 */game/*.map | grep maps/game/ | grep -v maps/game/mp/ | shuf -n 1 | awk -F/ '{print $3}') && dhewm3 +set r_fullscreen 1 +set r_mode -1 +set r_customWidth 1920 +set r_customHeight 1080 +set fs_basepath $GAME_DIR +set fs_game ${basegame} +seta com_allowconsole 1 +map $(echo game/$(basename -- ${mapfile%.*}))
-$ export GAME_DIR=~/games/doom3 && export basegame=d3xp && mapfile=$(unzip -l $GAME_DIR/${basegame}/pak000.pk4 */game/*.map | grep maps/game/ | grep -v maps/game/mp/ | shuf -n 1 | awk -F/ '{print $3}') && dhewm3 +set r_fullscreen 1 +set r_mode -1 +set r_customWidth 1920 +set r_customHeight 1080 +set fs_basepath $GAME_DIR +set fs_game ${basegame} +seta com_allowconsole 1 +map $(echo game/$(basename -- ${mapfile%.*}))
+~/src/rbdoom3-bfg/build/RBDoom3BFG +set fs_basepath ~/games/doom3-bfg +set com_allowConsole 1
 ```

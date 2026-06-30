@@ -1,54 +1,215 @@
-# Console Commands
-The console is enabled by adding "+seta com_allowconsole 1" (without quotes) to the game's launch options in Steam. The ~ key opens and closes the console ingame.
-```text
-map - loads a map
-map game/<map filename>
-map game/alpha1
+# Doom 3: comandos directos de mapas
+
+Comandos de una sola línea para copiar y pegar. Todos usan `~/src/dhewm3/build/dhewm3` y `~/games/doom3`.
+
+## Doom 3 base
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/mars_city1
 ```
 
-# Base levels
-```text
-01. Mars City - mars_city1
-02. Mars City Underground - mc_underground
-03. Mars City - mars_city2
-04. UAC Administration - admin
-05. Alpha Labs Sector 1 - alphalabs1
-06. Alpha Labs Sector 2 - alphalabs2
-07. Alpha Labs Sector 3 - alphalabs3
-08. Alpha Labs Sector 4 - alphalabs4
-09. EnPro Plant - enpro
-10. Communications Transfer - commoutside
-11. Communications - comm1
-12. Monorail Skybridge - recycling1
-13. Recycling Sector - recycling2
-14. Monorail - monorail
-15. Delta Labs Sector 1 - delta1
-16. Delta Labs Sector 2a - delta2a
-17. Delta Labs Sector 2b - delta2b
-18. Delta Labs Sector 3 - delta3
-19. Delta Labs Sector 4 - delta4
-20. Hell - hell1
-21. Delta Labs Sector 5 - delta5
-22. Central Processing - cpu
-23. Central Server Banks - cpuboss
-24. Site 3 - site3
-25. Caverns Area 1 - caverns1
-26. Caverns Area 2 - caverns2
-27. Primary Excavation Site - hellhole
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/mc_underground
 ```
 
-# RoE levels
-```text
-01. Erebus Level 1: Main Excavation - erebus1
-02. Erebus Level 2: Erebus Dig Site - erebus2
-03. Erebus Level 3: Erebus Labs - erebus 3
-04. Erebus Level 4: Erebus Control - erebus4
-05. Erebus Level 5: Erebus Research - erebus5
-06. Erebus Level 6: Erebus Station - erebus6
-07. Phobos Labs Sector 1: Teleportation - phobos1
-08. Phobos Labs Sector 2: Molecular Research - phobos2
-09. Phobos Labs Sector 3: Main Reactor - phobos3
-10. Phobos Labs Revisited: Teleportation - phobos4
-11. Delta Labs Unknown: Union Aerospace Research Division - deltax
-12. Hell - hell
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/mars_city2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/admin
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/alphalabs1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/alphalabs2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/alphalabs3
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/alphalabs4
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/enpro
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/commoutside
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/comm1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/recycling1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/recycling2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/monorail
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/delta1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/delta2a
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/delta2b
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/delta3
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/delta4
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/hell1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/delta5
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/cpu
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/cpuboss
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/site3
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/caverns1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/caverns2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +seta com_allowconsole 1 +map game/hellhole
+```
+
+## Resurrection of Evil
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/erebus1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/erebus2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/erebus3
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/erebus4
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/erebus5
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/erebus6
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/phobos1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/phobos2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/phobos3
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/phobos4
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/deltax
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3xp +seta com_allowconsole 1 +map game/hell
+```
+
+## The Lost Mission
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +set fs_gameDllPath ~/games/doom3/dhewm3-mods +seta com_allowconsole 1 +map game/le_underground
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +set fs_gameDllPath ~/games/doom3/dhewm3-mods +seta com_allowconsole 1 +map game/le_underground2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +set fs_gameDllPath ~/games/doom3/dhewm3-mods +seta com_allowconsole 1 +map game/le_enpro1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +set fs_gameDllPath ~/games/doom3/dhewm3-mods +seta com_allowconsole 1 +map game/le_enpro2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +set fs_gameDllPath ~/games/doom3/dhewm3-mods +seta com_allowconsole 1 +map game/le_exis1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +set fs_gameDllPath ~/games/doom3/dhewm3-mods +seta com_allowconsole 1 +map game/le_exis2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +set fs_gameDllPath ~/games/doom3/dhewm3-mods +seta com_allowconsole 1 +map game/le_hell
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game d3le +set fs_game_base d3xp +set fs_gameDllPath ~/games/doom3/dhewm3-mods +seta com_allowconsole 1 +map game/le_hell_post
+```
+
+## Otros mapas/mods instalados
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game e3maps +seta com_allowconsole 1 +map game/e3_1
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game e3maps +seta com_allowconsole 1 +map game/e3_2
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game e3maps +seta com_allowconsole 1 +map game/e3_3
+```
+
+```shell
+~/src/dhewm3/build/dhewm3 +set fs_basepath ~/games/doom3 +set fs_game quake +seta com_allowconsole 1 +map castle
 ```
