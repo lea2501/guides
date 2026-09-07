@@ -1,11 +1,34 @@
-# Usage
+# Raze
+
+Ejecutable local: `~/src/Raze/build/raze`
+
+Instalar o actualizar en Devuan:
+
 ```shell
-$ raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/duke3d/ -gamegrp ~/games/duke3d/duke3d.grp -file ~/games/duke3d/dukedc.grp
-$ raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/shadow_warrior/ -gamegrp ~/games/shadow_warrior/sw.grp -file ~/games/shadow_warrior/td.grp
-$ raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/blood/ -gamegrp ~/games/blood/blood.rff -ini fo.ini
+~/src/scripts/devuan/games/install_raze.sh
 ```
 
-# Random map pack
+Raze reúne Blood, Redneck Rampage, Shadow Warrior y PowerSlave/Exhumed en un
+solo motor basado en tecnología de GZDoom.
+
 ```shell
-$ raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/blood/ -gamegrp ~/games/blood/blood.rff -ini $(basename $(find ~/games/blood/*.ini ! -name *mapedit* -type f | sort | shuf -n 1))
+~/src/Raze/build/raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/emu/dos/fps/blood
 ```
+
+```shell
+~/src/Raze/build/raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/emu/dos/fps/pslave
+```
+
+```shell
+~/src/Raze/build/raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/emu/dos/fps/rrampage
+```
+
+```shell
+~/src/Raze/build/raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/emu/dos/fps/rramprr
+```
+
+```shell
+~/src/Raze/build/raze -width 1920 -height 1080 -fullscreen -game_dir ~/games/emu/dos/fps/swarrior
+```
+
+Proyecto: `https://github.com/ZDoom/Raze`

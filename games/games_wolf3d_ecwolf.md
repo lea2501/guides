@@ -1,36 +1,49 @@
-# Resources
+# ECWolf
+
+Ejecutable local: `~/src/ECWolf/build/ecwolf`
+
+ECWolf es la opción orientada a mejoras modernas y mods, comparable al papel
+de GZDoom en Doom. La instalación y las actualizaciones se hacen con:
+
+```shell
+~/src/scripts/devuan/games/install_ecwolf.sh
+```
+
+## Recursos
+
 ```text
-https://maniacsvault.net/ecwolf/wiki/Compile_ECWolf_on_Linux
+https://github.com/ECWolfEngine/ECWolf
+https://maniacsvault.net/ecwolf/wiki/Main_Page
 ```
 
-# Compiling
+## Datos del juego
+
+ECWolf busca los datos originales en `~/.local/share/ecwolf`. Para usar la
+copia de Wolfenstein 3D ya instalada sin duplicarla:
+
 ```shell
-# pacman -S --needed gcc make cmake sdl2 sdl2_mixer sdl2_net git zlib bzip2 libjpeg-turbo gtk2 sdl sdl_mixer sdl_net
-$ mkdir -p ~/src
-$ cd ~/src
-$ git clone https://bitbucket.org/ecwolf/ecwolf.git
-$ mkdir -pv ecwolf/build
-$ cd ~/src/ecwolf/build
-$ cmake .. -DCMAKE_BUILD_TYPE=Release -DGPL=ON
-$ make
+mkdir -p ~/.local/share/ecwolf
+ln -s ~/games/wolf3d/wolf3d/*.WL6 ~/.local/share/ecwolf/
 ```
 
-# Copy game data
+Los tres directorios de Spear of Destiny contienen archivos `.SOD` con los
+mismos nombres. No conviene enlazarlos juntos: agregar desde el selector de
+juego solamente la misión que se quiera ejecutar, o mantener perfiles
+separados.
+
+## Uso
+
+Abrir el selector de juego:
+
 ```shell
-$ mkdir -p ~/.local/share/ecwolf
-$ ln -s ~/games/wolf3d/wolf3d/*.wl6 ~/.local/share/ecwolf/
-$ cp -r ~/games/wolf3d/spear ~/.local/share/ecwolf/
+~/src/ECWolf/build/ecwolf
 ```
 
-# Uninstallation
+Ejecutar el mod Astrostein instalado:
+
 ```shell
-$ sudo rm -rfv /usr/games/ecwolf
-$ sudo rm -fv /usr/bin/ecwolf
-$ sudo rm -rfv /usr/games/ecwolf-alpha
-$ sudo rm -fv /usr/bin/ecwolf-alpha
+~/src/ECWolf/build/ecwolf --fullscreen --res 1920 1080 --nowait --file ~/games/wolf3d/mods/ecwolf/astrostein_spifferaneous_edition/astrostein_spiff_hd.pk3
 ```
 
-# Usage
-```shell
-$ ~/src/ecwolf/build/ecwolf --fullscreen --res 1920 1080 --nowait --file ~/games/wolf3d/mods/ecwolf/astrostein_spifferaneous_edition/astrostein_spiff_hd.pk3
-```
+La configuración y las partidas guardadas de ECWolf quedan separadas de los
+datos originales dentro de los directorios XDG del usuario.

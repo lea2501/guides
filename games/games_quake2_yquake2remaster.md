@@ -1,5 +1,7 @@
 # Yamagi Quake II Remaster
 
+Ejecutable local: `~/src/yquake2remaster/release/quake2`
+
 `-datadir` debe apuntar al directorio que contiene `baseq2` y los
 directorios de los mods. No hay que ejecutarlo desde el directorio
 `release`.

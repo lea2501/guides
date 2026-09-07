@@ -1,4 +1,7 @@
 # compile
+
+Ejecutable local: `~/src/frogcomposband/src/frogcomposband`
+
 ```shell
 $ mkdir -p ~/src
 $ cd ~/src
@@ -14,7 +17,7 @@ $ make install
 
 # Usage
 ```shell
-$ ~/.frogcomposband/games/frogcomposband -uUser -mgcu -- -n1
+$ ~/src/frogcomposband/src/frogcomposband -uUser -mgcu -- -n1
 ```
 
 # Tips

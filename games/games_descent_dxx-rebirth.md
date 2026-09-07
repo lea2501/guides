@@ -1,6 +1,15 @@
 # Descent clásico con DXX-Rebirth
 
+Ejecutables locales: `~/src/dxx-rebirth/d1x-rebirth` y
+`~/src/dxx-rebirth/d2x-rebirth`
+
 Guía pensada para copiar y pegar comandos. Cada comando está en una sola línea, con rutas desde `~/` y sin depender de variables seteadas antes.
+
+## Instalación en Devuan
+
+```shell
+~/src/scripts/devuan/games/install_dxx-rebirth.sh
+```
 
 ## Dependencias
 
@@ -34,24 +43,24 @@ cd ~/src/dxx-rebirth && scons sdl2=1 d1x=1 builddir_prefix=build/
 cd ~/src/dxx-rebirth && scons sdl2=1 d2x=1 builddir_prefix=build/
 ```
 
-## Ejecutables locales actuales
+## Ejecutables locales
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -help
+~/src/dxx-rebirth/d1x-rebirth -help
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -help
+~/src/dxx-rebirth/d2x-rebirth -help
 ```
 
 ## Juegos base
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -window -notitles -nomovies
 ```
 
 ## Misiones oficiales instaladas
@@ -61,37 +70,37 @@ En DXX-Rebirth elegí la misión desde el menú del juego después de abrirlo.
 ### Descent 1
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/official/chaos -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/official/chaos -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/official/levels-of-the-world -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/official/levels-of-the-world -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/official/dimensions-for-descent -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/official/dimensions-for-descent -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/official -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/official -window -notitles -nomovies
 ```
 
 ### Descent 2
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2 -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2 -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/official/chaos -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/official/chaos -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/official/two-player -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/official/two-player -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/official/vertigo-bonus -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/official/vertigo-bonus -window -notitles -nomovies
 ```
 
 ## Misiones community recomendadas instaladas
@@ -99,65 +108,65 @@ En DXX-Rebirth elegí la misión desde el menú del juego después de abrirlo.
 ### Descent 1
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/descent-vignettes -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/descent-vignettes -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/trine-episode-1 -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/trine-episode-1 -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/trine-episode-2 -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/trine-episode-2 -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/cererian-expedition -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/cererian-expedition -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/apocalyptic-factor -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/apocalyptic-factor -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/dont-panic -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community/dont-panic -window -notitles -nomovies
 ```
 
 ### Descent 2
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/plutonian-shores -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/plutonian-shores -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/the-enemy-within-15th-anniversary -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/the-enemy-within-15th-anniversary -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/the-enemy-within-original -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/the-enemy-within-original -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/obsidian -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/obsidian -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/entropy-experiment -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/entropy-experiment -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/entropy-experiment-2 -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/entropy-experiment-2 -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/enemy-vignettes -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/enemy-vignettes -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/descent-maximum -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/descent-maximum -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/project-kcx-f2 -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community/project-kcx-f2 -window -notitles -nomovies
 ```
 
 ## Abrir con todas las carpetas community
@@ -165,11 +174,11 @@ En DXX-Rebirth elegí la misión desde el menú del juego después de abrirlo.
 Esto mete muchas misiones en el selector. Útil para explorar, menos limpio que abrir un pack puntual.
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d1x-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community -window -notitles -nomovies
+~/src/dxx-rebirth/d1x-rebirth -hogdir ~/games/descent/descent1 -add-missions-dir ~/games/descent/missions/d1/community -window -notitles -nomovies
 ```
 
 ```shell
-~/src/dxx-rebirth/build/linux-4c09416b-ltoogl/d2x-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community -window -notitles -nomovies
+~/src/dxx-rebirth/d2x-rebirth -hogdir ~/games/descent/descent2 -add-missions-dir ~/games/descent/missions/d2/community -window -notitles -nomovies
 ```
 
 ## Notas

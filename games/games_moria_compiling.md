@@ -1,4 +1,7 @@
 # Compile
+
+Ejecutable local: `~/src/umoria/build/umoria/umoria`
+
 ```shell
 $ cd ~/src 
 $ git clone https://github.com/dungeons-of-moria/umoria.git

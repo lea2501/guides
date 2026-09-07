@@ -1,5 +1,7 @@
 # Blood con NBlood
 
+Ejecutable local: `~/src/NBlood/nblood`
+
 ## Rutas locales
 
 ```shell

@@ -1,21 +1,23 @@
-# Compilation
+# BStone
+
+Ejecutable local: `~/src/bstone/build/install/bstone`
+
+Instalar o actualizar en Devuan:
+
 ```shell
-$ mkdir -p ~/src
-$ git clone https://github.com/bibendovsky/bstone.git
-$ cd bstone
-$ mkdir -p build && cd build
-$ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=~/src/bstone/build/install
-$ cmake --build . --target install
+~/src/scripts/devuan/games/install_bstone.sh
 ```
 
-# Usage
-## Blake Stone: Aliens Of Gold
+## Blake Stone: Aliens of Gold
+
 ```shell
-$ ~/src/bstone/build/install/bstone --no_screens --vid_width 1920 --vid_height 1080 --vid_renderer software --vid_texture_upscale_filter xbrz --data_dir ~/PATH/TO/GAME_DIR --aog 
-$ ~/src/bstone/build/install/bstone --no_screens --vid_width 1920 --vid_height 1080 --vid_renderer auto_detect --vid_texture_upscale_filter xbrz --data_dir ~/PATH/TO/GAME_DIR --aog 
+~/src/bstone/build/install/bstone --no_screens --vid_width 1920 --vid_height 1080 --vid_renderer auto_detect --vid_texture_upscale_filter xbrz --data_dir ~/games/emu/dos/fps/bstone --aog
 ```
+
 ## Blake Stone: Planet Strike
+
 ```shell
-$ ~/src/bstone/build/install/bstone --no_screens --vid_width 1920 --vid_height 1080 --vid_renderer software --vid_texture_upscale_filter xbrz --data_dir ~/PATH/TO/GAME_DIR --ps
-$ ~/src/bstone/build/install/bstone --no_screens --vid_width 1920 --vid_height 1080 --vid_renderer auto_detect --vid_texture_upscale_filter xbrz --data_dir ~/PATH/TO/GAME_DIR --ps 
+~/src/bstone/build/install/bstone --no_screens --vid_width 1920 --vid_height 1080 --vid_renderer auto_detect --vid_texture_upscale_filter xbrz --data_dir ~/games/emu/dos/fps/bstoneps --ps
 ```
+
+Proyecto: `https://github.com/bibendovsky/bstone`

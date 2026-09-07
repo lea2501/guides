@@ -1,4 +1,7 @@
 # Resources
+
+Ejecutable local: `~/src/angband/src/angband`
+
 ```text
 https://angband.readthedocs.io/en/latest/hacking/compiling.html
 ```

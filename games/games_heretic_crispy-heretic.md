@@ -1,6 +1,9 @@
 # Usage
+
+Ejecutable local: `~/src/crispy-doom/src/crispy-heretic`
+
 ```shell
-$ crispy-heretic -fullscreen -iwad ~/games/doom/maps/iwads/heretic.wad -file ~/games/doom/maps/heretic/vanilla/ ~/games/doom/mods/vanilla/palette/dimm_pal/her-pal.wad -savedir ~/games/doom/savegames/heretic/ -skill 3 -warp 1 1
+$ ~/src/crispy-doom/src/crispy-heretic -fullscreen -iwad ~/games/doom/maps/iwads/heretic.wad -file ~/games/doom/maps/heretic/vanilla/ ~/games/doom/mods/vanilla/palette/dimm_pal/her-pal.wad -savedir ~/games/doom/savegames/heretic/ -skill 3 -warp 1 1
 ```
 
 # Random map from dir

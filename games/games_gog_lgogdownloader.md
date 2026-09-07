@@ -1,5 +1,7 @@
 # Resources
 
+Ejecutable local: `~/src/lgogdownloader/build/lgogdownloader`
+
 ```text
 https://github.com/Sude-/lgogdownloader
 ```
@@ -36,24 +38,24 @@ $ ~/src/scripts/devuan/games/update_lgogdownloader.sh
 
 ```shell
 $ cd <directory to store files>
-$ lgogdownloader --login
+$ ~/src/lgogdownloader/build/lgogdownloader --login
 # Enter the account credentials.
 # If login requires a browser or CAPTCHA:
-$ lgogdownloader --gui-login
-$ lgogdownloader --list
-$ lgogdownloader --list details --game <title>
-$ lgogdownloader --download
-$ lgogdownloader --updated --download
+$ ~/src/lgogdownloader/build/lgogdownloader --gui-login
+$ ~/src/lgogdownloader/build/lgogdownloader --list
+$ ~/src/lgogdownloader/build/lgogdownloader --list details --game <title>
+$ ~/src/lgogdownloader/build/lgogdownloader --download
+$ ~/src/lgogdownloader/build/lgogdownloader --updated --download
 # Or:
-$ lgogdownloader --download --threads 8 --retries 2 --platform linux --exclude extras  --game <title>
-$ lgogdownloader --download --threads 8 --retries 2 --exclude patches --game <title>
+$ ~/src/lgogdownloader/build/lgogdownloader --download --threads 8 --retries 2 --platform linux --exclude extras  --game <title>
+$ ~/src/lgogdownloader/build/lgogdownloader --download --threads 8 --retries 2 --exclude patches --game <title>
 ```
 
 # Repairing files
 
 ```shell
-$ lgogdownloader --repair --game beneath_a_steel_sky
-$ lgogdownloader --repair --download --game "^a"
+$ ~/src/lgogdownloader/build/lgogdownloader --repair --game beneath_a_steel_sky
+$ ~/src/lgogdownloader/build/lgogdownloader --repair --download --game "^a"
 ```
 
 # Configuration
