@@ -1,4 +1,4 @@
 # Usage
 ```shell
-$ sshuttle -r <user>@10.254.244.111 -x 10.254.244.111 0/0 --dns -D
+$ sshuttle -r <USER>@<SSH_SERVER> -x <EXCLUDED_HOST_OR_NETWORK> 0/0 --dns -D
 ```

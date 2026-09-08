@@ -1,7 +1,7 @@
 # sshfs
 ## Windows server
 ```shell
-> net use m: \\192.168.10.53\media /USER:lchescotta /PERSISTENT:yes
+> net use m: \\<SERVER>\<SHARE> /USER:<USERNAME> /PERSISTENT:yes
 ```
 
 ## Client

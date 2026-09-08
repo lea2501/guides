@@ -53,3 +53,34 @@ $ tar -cvf - file1 file2 dir3 | gzip > archive.tar.gz
 ```shell
 $ tar -czvf /path/to/file.tar.gz --exclude=/path/to/dir/.svn /path/to/dir
 ```
+
+# List files in an archive
+```shell
+$ tar -tf archive.tar
+```
+
+# Create an xz-compressed archive
+```shell
+$ tar -cJvf archive.tar.xz directory/
+```
+
+# Add or update files in an uncompressed archive
+```shell
+$ tar -rvf archive.tar file.txt
+$ tar -uvf archive.tar file.txt
+```
+
+# Delete files from an uncompressed archive
+```shell
+$ tar --delete -vf archive.tar file1 file2
+```
+
+# Create a tar archive and encrypt it with GPG
+```shell
+$ tar -cvf - file1.txt file2.txt directory/ | gpg -c -o archive.tar.gpg
+```
+
+# Decrypt and extract an encrypted tar archive
+```shell
+$ gpg -d archive.tar.gpg | tar -xvf -
+```
